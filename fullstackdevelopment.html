@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Full‑Stack Development • CET138 ePortfolio</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body data-bs-theme="light">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="index.html">CET138 ePortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+                <a class="nav-link " href="index.html" data-page="index">Home</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link active" href="fullstackdevelopment.html" data-page="fullstack">Full‑Stack Dev</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link " href="html.html" data-page="html">HTML</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link " href="css.html" data-page="css">CSS</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link " href="js.html" data-page="js">JavaScript</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link " href="bootstrap.html" data-page="bootstrap">Bootstrap</a>
+            </li>
+        </ul>
+        <form class="d-flex align-items-center gap-2" role="search">
+          <div class="form-check form-switch m-0">
+            <input class="form-check-input" type="checkbox" id="themeToggle" aria-label="Toggle dark mode" />
+            <label class="form-check-label small" for="themeToggle">Dark</label>
+          </div>
+          <a class="btn btn-outline-primary btn-sm" href="#" id="backToTopSmall" title="Back to top">Top</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5 mt-4">
+    
+<header class="py-4">
+  <h1 class="fw-bold">What is Full‑Stack Development?</h1>
+  <p class="lead">Full‑stack combines front‑end (what users see) and back‑end (servers, databases, APIs) to deliver complete web apps.</p>
+</header>
+
+<section class="mb-5">
+  <div class="row g-4">
+    <div class="col-lg-8">
+      <p>At a high level, a full‑stack developer understands how to build user interfaces with HTML, CSS, and JavaScript, and how those interfaces communicate with back‑end services via HTTP and JSON APIs. Even though this portfolio has no back‑end, it demonstrates how the layers fit together.</p>
+      <ul>
+        <li><strong>Front‑end:</strong> HTML structure, CSS presentation, JavaScript behavior.</li>
+        <li><strong>Back‑end:</strong> Server logic (e.g., Node/Express), authentication, business rules.</li>
+        <li><strong>Database:</strong> Persistence layer (SQL/NoSQL), schemas, queries.</li>
+        <li><strong>APIs:</strong> The contract between front‑end and back‑end; typically REST or GraphQL.</li>
+        <li><strong>DevOps & Deployment:</strong> Hosting, CI/CD, monitoring, environment variables.</li>
+      </ul>
+    </div>
+    <div class="col-lg-4">
+      <div class="card shadow-sm">
+        <div class="card-header">Common Stacks</div>
+        <div class="card-body">
+          <ul class="mb-0">
+            <li><strong>MERN</strong>: MongoDB, Express, React, Node</li>
+            <li><strong>LAMP</strong>: Linux, Apache, MySQL, PHP</li>
+            <li><strong>Django</strong>: Python, Django, PostgreSQL</li>
+            <li><strong>.NET</strong>: C#, ASP.NET, SQL Server</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mb-5">
+  <h2 class="h4">Request Flow (Client ⇄ Server)</h2>
+  <ol class="list-group list-group-numbered">
+    <li class="list-group-item">User clicks a button in the browser (front‑end).</li>
+    <li class="list-group-item">JavaScript makes a <code>fetch()</code> call to an API endpoint.</li>
+    <li class="list-group-item">Server authenticates, runs business logic, reads/writes the database.</li>
+    <li class="list-group-item">Server returns JSON. Front‑end updates the DOM to show results.</li>
+  </ol>
+</section>
+
+<section class="mb-5">
+  <h2 class="h4">Try an API (front‑end only)</h2>
+  <p>This example requests public dummy posts and renders titles. In a real app this would hit your back‑end.</p>
+  <div class="d-flex gap-2">
+    <button id="loadPosts" class="btn btn-primary">Load Posts</button>
+    <button id="clearPosts" class="btn btn-outline-secondary">Clear</button>
+  </div>
+  <ul id="postsList" class="list-group list-group-flush my-3"></ul>
+  <div class="alert alert-info small">Uses <code>fetch('https://jsonplaceholder.typicode.com/posts')</code> (CORS‑enabled test API).</div>
+</section>
+
+  </main>
+
+  <footer class="border-top py-4 mt-5">
+    <div class="container small text-secondary d-flex flex-wrap justify-content-between align-items-center">
+      <span>© <span id="year"></span> CET138 ePortfolio</span>
+      <span>Built with HTML • CSS • Bootstrap • JS</span>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="btn btn-primary btn-lg rounded-circle" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

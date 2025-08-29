@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap • CET138 ePortfolio</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+<body data-bs-theme="light">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="index.html">CET138 ePortfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+                <a class="nav-link " href="index.html" data-page="index">Home</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link " href="fullstackdevelopment.html" data-page="fullstack">Full‑Stack Dev</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link " href="html.html" data-page="html">HTML</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link " href="css.html" data-page="css">CSS</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link " href="js.html" data-page="js">JavaScript</a>
+            </li>
+<li class="nav-item">
+                <a class="nav-link active" href="bootstrap.html" data-page="bootstrap">Bootstrap</a>
+            </li>
+        </ul>
+        <form class="d-flex align-items-center gap-2" role="search">
+          <div class="form-check form-switch m-0">
+            <input class="form-check-input" type="checkbox" id="themeToggle" aria-label="Toggle dark mode" />
+            <label class="form-check-label small" for="themeToggle">Dark</label>
+          </div>
+          <a class="btn btn-outline-primary btn-sm" href="#" id="backToTopSmall" title="Back to top">Top</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5 mt-4">
+    
+<header class="py-4">
+  <h1 class="fw-bold">Bootstrap — Components & Utilities</h1>
+  <p class="lead">Use the grid, utilities, and prebuilt components to move fast with consistent design.</p>
+</header>
+
+<section class="mb-5">
+  <h2 class="h5">Grid & Cards</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-3">
+    <div class="col"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6">Card 1</h3><p>Responsive columns collapse on small screens.</p></div></div></div>
+    <div class="col"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6">Card 2</h3><p>Utilities like <code>p-3</code>, <code>shadow-sm</code>, <code>rounded</code>.</p></div></div></div>
+    <div class="col"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6">Card 3</h3><p>Mix layout and spacing classes.</p></div></div></div>
+  </div>
+</section>
+
+<section class="mb-5">
+  <h2 class="h5">Modal & Toast</h2>
+  <div class="d-flex gap-2 mb-2">
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demoModal">Open Modal</button>
+    <button class="btn btn-outline-primary" id="showToast">Show Toast</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Hello from Bootstrap!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>This modal is triggered by data attributes, powered by Bootstrap’s JS.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-primary">Do Action</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="demoToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        This is a toast message!
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mb-5">
+  <h2 class="h5">Forms & Validation</h2>
+  <form class="row g-3 needs-validation" id="bsForm" novalidate>
+    <div class="col-md-6">
+      <label for="bsName" class="form-label">Name</label>
+      <input id="bsName" class="form-control" required>
+      <div class="invalid-feedback">Please provide your name.</div>
+    </div>
+    <div class="col-md-6">
+      <label for="bsEmail" class="form-label">Email</label>
+      <input type="email" id="bsEmail" class="form-control" required>
+      <div class="invalid-feedback">Please provide a valid email.</div>
+    </div>
+    <div class="col-12 d-grid d-md-block">
+      <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+  </form>
+</section>
+
+  </main>
+
+  <footer class="border-top py-4 mt-5">
+    <div class="container small text-secondary d-flex flex-wrap justify-content-between align-items-center">
+      <span>© <span id="year"></span> CET138 ePortfolio</span>
+      <span>Built with HTML • CSS • Bootstrap • JS</span>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="btn btn-primary btn-lg rounded-circle" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
